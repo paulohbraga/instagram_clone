@@ -59,591 +59,615 @@ class _MyHomePageState extends State<MyHomePage> {
         currentIndex: 0,
         selectedItemColor: Colors.grey[900],
       ),
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 0,
-        leading: IconButton(
-            icon: ImageIcon(
-              AssetImage("assets/images/instagram_camera_icon.png"),
-              size: 25,
-              color: Colors.grey[700],
-            ),
-            onPressed: () => print("clicked")),
-        actions: <Widget>[
-          IconButton(
-              icon: ImageIcon(
-                AssetImage("assets/images/paper_plane.png"),
-                size: 25,
-                color: Colors.grey[700],
-              ),
-              onPressed: null),
-        ],
-        title: Center(
-          child: Text(
-            "Instagram",
-            textAlign: TextAlign.center,
-            style: TextStyle(color: Colors.black, fontFamily: 'Billabong', fontSize: 40, fontWeight: FontWeight.w500),
-          ),
-        ),
-      ),
-      body: SingleChildScrollView(
-        child: Column(children: <Widget>[
-          Row(
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.only(left: 15),
-                child: Container(
-                    child: Text(
-                  'Stories',
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                )),
-              ),
-              Spacer(),
-              IconButton(icon: Icon(Icons.arrow_right), onPressed: null),
-              Padding(
-                padding: const EdgeInsets.only(right: 15),
-                child: Text('Watch all', style: TextStyle(fontWeight: FontWeight.bold)),
-              ),
+      body: CustomScrollView(
+        slivers: <Widget>[
+          SliverAppBar(
+            expandedHeight: 80,
+            floating: true,
+            snap: true,
+            backgroundColor: Colors.white,
+            elevation: 0,
+            leading: IconButton(
+                icon: ImageIcon(
+                  AssetImage("assets/images/instagram_camera_icon.png"),
+                  size: 25,
+                  color: Colors.grey[700],
+                ),
+                onPressed: () => print("clicked")),
+            actions: <Widget>[
+              IconButton(
+                  icon: ImageIcon(
+                    AssetImage("assets/images/paper_plane.png"),
+                    size: 25,
+                    color: Colors.grey[700],
+                  ),
+                  onPressed: null),
             ],
-          ),
-          Container(
-            height: 100,
-            child: ListView(
-              scrollDirection: Axis.horizontal,
-              children: <Widget>[
-                UserStoryCircleAvatar(),
-                Column(
-                  children: <Widget>[
-                    Container(
-                      margin: EdgeInsets.all(5),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50),
-                          gradient: LinearGradient(
-                              begin: Alignment.topRight,
-                              end: Alignment.bottomLeft,
-                              colors: [Colors.purple, Colors.orange])),
-                      width: 70,
-                      height: 70,
-                      child: Padding(
-                        padding: const EdgeInsets.all(4.0),
-                        child: CircleAvatar(
-                          backgroundImage: NetworkImage("https://picsum.photos/100/101"),
-                          backgroundColor: Colors.grey,
-                        ),
-                      ),
-                    ),
-                    Text('User', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
-                  ],
-                ),
-                Column(
-                  children: <Widget>[
-                    Container(
-                      margin: EdgeInsets.all(5),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50),
-                          gradient: LinearGradient(
-                              begin: Alignment.topRight,
-                              end: Alignment.bottomLeft,
-                              colors: [Colors.purple, Colors.orange])),
-                      width: 70,
-                      height: 70,
-                      child: Padding(
-                        padding: const EdgeInsets.all(4.0),
-                        child: CircleAvatar(
-                          backgroundImage: NetworkImage("https://picsum.photos/100/102"),
-                          backgroundColor: Colors.grey,
-                        ),
-                      ),
-                    ),
-                    Text('User', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
-                  ],
-                ),
-                Column(
-                  children: <Widget>[
-                    Container(
-                      margin: EdgeInsets.all(5),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50),
-                          gradient: LinearGradient(
-                              begin: Alignment.topRight,
-                              end: Alignment.bottomLeft,
-                              colors: [Colors.purple, Colors.orange])),
-                      width: 70,
-                      height: 70,
-                      child: Padding(
-                        padding: const EdgeInsets.all(4.0),
-                        child: CircleAvatar(
-                          backgroundImage: NetworkImage("https://picsum.photos/100/103"),
-                          backgroundColor: Colors.grey,
-                        ),
-                      ),
-                    ),
-                    Text('User', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
-                  ],
-                ),
-                Column(
-                  children: <Widget>[
-                    Container(
-                      margin: EdgeInsets.all(5),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50),
-                          gradient: LinearGradient(
-                              begin: Alignment.topRight,
-                              end: Alignment.bottomLeft,
-                              colors: [Colors.purple, Colors.orange])),
-                      width: 70,
-                      height: 70,
-                      child: Padding(
-                        padding: const EdgeInsets.all(4.0),
-                        child: CircleAvatar(
-                          backgroundImage: NetworkImage("https://picsum.photos/100/104"),
-                          backgroundColor: Colors.grey,
-                        ),
-                      ),
-                    ),
-                    Text('User', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
-                  ],
-                ),
-                Column(
-                  children: <Widget>[
-                    Container(
-                      margin: EdgeInsets.all(5),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50),
-                          gradient: LinearGradient(
-                              begin: Alignment.topRight,
-                              end: Alignment.bottomLeft,
-                              colors: [Colors.purple, Colors.orange])),
-                      width: 70,
-                      height: 70,
-                      child: Padding(
-                        padding: const EdgeInsets.all(4.0),
-                        child: CircleAvatar(
-                          backgroundImage: NetworkImage("https://picsum.photos/100/105"),
-                          backgroundColor: Colors.grey,
-                        ),
-                      ),
-                    ),
-                    Text('User', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
-                  ],
-                ),
-                Column(
-                  children: <Widget>[
-                    Container(
-                      margin: EdgeInsets.all(5),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50),
-                          gradient: LinearGradient(
-                              begin: Alignment.topRight,
-                              end: Alignment.bottomLeft,
-                              colors: [Colors.purple, Colors.orange])),
-                      width: 70,
-                      height: 70,
-                      child: Padding(
-                        padding: const EdgeInsets.all(4.0),
-                        child: CircleAvatar(
-                          backgroundImage: NetworkImage("https://picsum.photos/100/106"),
-                          backgroundColor: Colors.grey,
-                        ),
-                      ),
-                    ),
-                    Text('User', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
-                  ],
-                ),
-                Column(
-                  children: <Widget>[
-                    Container(
-                      margin: EdgeInsets.all(5),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50),
-                          gradient: LinearGradient(
-                              begin: Alignment.topRight,
-                              end: Alignment.bottomLeft,
-                              colors: [Colors.purple, Colors.orange])),
-                      width: 70,
-                      height: 70,
-                      child: Padding(
-                        padding: const EdgeInsets.all(4.0),
-                        child: CircleAvatar(
-                          backgroundImage: NetworkImage("https://picsum.photos/100/107"),
-                          backgroundColor: Colors.grey,
-                        ),
-                      ),
-                    ),
-                    Text('User', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
-                  ],
-                ),
-                Column(
-                  children: <Widget>[
-                    Container(
-                      margin: EdgeInsets.all(5),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50),
-                          gradient: LinearGradient(
-                              begin: Alignment.topRight,
-                              end: Alignment.bottomLeft,
-                              colors: [Colors.purple, Colors.orange])),
-                      width: 70,
-                      height: 70,
-                      child: Padding(
-                        padding: const EdgeInsets.all(4.0),
-                        child: CircleAvatar(
-                          backgroundImage: NetworkImage("https://picsum.photos/100/108"),
-                          backgroundColor: Colors.grey,
-                        ),
-                      ),
-                    ),
-                    Text('User', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
-                  ],
-                ),
-                Column(
-                  children: <Widget>[
-                    Container(
-                      margin: EdgeInsets.all(5),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50),
-                          gradient: LinearGradient(
-                              begin: Alignment.topRight,
-                              end: Alignment.bottomLeft,
-                              colors: [Colors.purple, Colors.orange])),
-                      width: 70,
-                      height: 70,
-                      child: Padding(
-                        padding: const EdgeInsets.all(4.0),
-                        child: CircleAvatar(
-                          backgroundImage: NetworkImage("https://picsum.photos/100/109"),
-                          backgroundColor: Colors.grey,
-                        ),
-                      ),
-                    ),
-                    Text('User', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
-                  ],
-                ),
-                Column(
-                  children: <Widget>[
-                    Container(
-                      margin: EdgeInsets.all(5),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50),
-                          gradient: LinearGradient(
-                              begin: Alignment.topRight,
-                              end: Alignment.bottomLeft,
-                              colors: [Colors.purple, Colors.orange])),
-                      width: 70,
-                      height: 70,
-                      child: Padding(
-                        padding: const EdgeInsets.all(4.0),
-                        child: CircleAvatar(
-                          backgroundImage: NetworkImage("https://picsum.photos/100/110"),
-                          backgroundColor: Colors.grey,
-                        ),
-                      ),
-                    ),
-                    Text('User', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
-                  ],
-                ),
-              ],
+            title: Center(
+              child: Text(
+                "Instagram",
+                textAlign: TextAlign.center,
+                style:
+                    TextStyle(color: Colors.black, fontFamily: 'Billabong', fontSize: 40, fontWeight: FontWeight.w500),
+              ),
             ),
           ),
-          Divider(),
-          // ################################################# container
-          Container(
-            height: MediaQuery.of(context).size.height - kBottomNavigationBarHeight - 250,
-            //color: Colors.amber,
-            child: ListView(
-              children: <Widget>[
-                Card(
-                  elevation: 0,
-                  child: Column(
+          SliverList(
+            delegate: SliverChildListDelegate([
+              Column(children: <Widget>[
+                Row(
+                  children: <Widget>[
+                    Padding(
+                      padding: const EdgeInsets.only(left: 15),
+                      child: Container(
+                          child: Text(
+                        'Stories',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      )),
+                    ),
+                    Spacer(),
+                    IconButton(icon: Icon(Icons.arrow_right), onPressed: null),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 15),
+                      child: Text('Watch all', style: TextStyle(fontWeight: FontWeight.bold)),
+                    ),
+                  ],
+                ),
+                Container(
+                  height: 100,
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
                     children: <Widget>[
-                      Row(
+                      UserStoryCircleAvatar(),
+                      Column(
                         children: <Widget>[
-                          CircleAvatar(
-                            backgroundImage: NetworkImage("https://picsum.photos/100/120"),
+                          Container(
+                            margin: EdgeInsets.all(5),
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(50),
+                                gradient: LinearGradient(
+                                    begin: Alignment.topRight,
+                                    end: Alignment.bottomLeft,
+                                    colors: [Colors.purple, Colors.orange])),
+                            width: 70,
+                            height: 70,
+                            child: Padding(
+                              padding: const EdgeInsets.all(4.0),
+                              child: CircleAvatar(
+                                backgroundImage: NetworkImage("https://picsum.photos/100/101"),
+                                backgroundColor: Colors.grey,
+                              ),
+                            ),
                           ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text("Username", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black)),
-                          ),
-                          Spacer(),
-                          IconButton(icon: Icon(Icons.more_horiz), onPressed: null)
+                          Text('User', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
                         ],
                       ),
-                      InkWell(
-                        onTap: () => print("clicked image"),
-                        child: Container(
-                          margin: EdgeInsets.all(10),
-                          width: 400,
-                          height: 300,
-                          decoration: BoxDecoration(
-                              color: Colors.red,
-                              borderRadius: BorderRadius.circular(8),
-                              image: DecorationImage(
-                                  image: NetworkImage("https://picsum.photos/400/400"), fit: BoxFit.cover)),
-                        ),
-                      ),
-                      Row(
+                      Column(
                         children: <Widget>[
-                          IconButton(
-                              icon: Icon(
-                                Icons.favorite_border,
-                                size: 30,
-                                color: Colors.grey[700],
+                          Container(
+                            margin: EdgeInsets.all(5),
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(50),
+                                gradient: LinearGradient(
+                                    begin: Alignment.topRight,
+                                    end: Alignment.bottomLeft,
+                                    colors: [Colors.purple, Colors.orange])),
+                            width: 70,
+                            height: 70,
+                            child: Padding(
+                              padding: const EdgeInsets.all(4.0),
+                              child: CircleAvatar(
+                                backgroundImage: NetworkImage("https://picsum.photos/100/102"),
+                                backgroundColor: Colors.grey,
                               ),
-                              onPressed: null),
-                          IconButton(
-                              icon: Icon(
-                                Icons.panorama_fish_eye,
-                                size: 30,
-                                color: Colors.grey[700],
-                              ),
-                              onPressed: null),
-                          IconButton(
-                              icon: ImageIcon(
-                                AssetImage("assets/images/paper_plane.png"),
-                                size: 25,
-                                color: Colors.grey[900],
-                              ),
-                              onPressed: null),
-                          Spacer(),
-                          IconButton(
-                              icon: Icon(Icons.bookmark_border, size: 30, color: Colors.grey[900]), onPressed: null),
+                            ),
+                          ),
+                          Text('User', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
                         ],
                       ),
-                      ListTile(
-                        title: Text('2.445 likes', style: TextStyle(fontWeight: FontWeight.bold)),
-                        subtitle: Row(
-                          children: <Widget>[
-                            Text('Username ', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black)),
-                            Text('Hi!!!'),
-                            Text(
-                              ' #hashtag',
-                              style: TextStyle(color: Colors.blue),
-                            )
-                          ],
-                        ),
+                      Column(
+                        children: <Widget>[
+                          Container(
+                            margin: EdgeInsets.all(5),
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(50),
+                                gradient: LinearGradient(
+                                    begin: Alignment.topRight,
+                                    end: Alignment.bottomLeft,
+                                    colors: [Colors.purple, Colors.orange])),
+                            width: 70,
+                            height: 70,
+                            child: Padding(
+                              padding: const EdgeInsets.all(4.0),
+                              child: CircleAvatar(
+                                backgroundImage: NetworkImage("https://picsum.photos/100/103"),
+                                backgroundColor: Colors.grey,
+                              ),
+                            ),
+                          ),
+                          Text('User', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+                        ],
+                      ),
+                      Column(
+                        children: <Widget>[
+                          Container(
+                            margin: EdgeInsets.all(5),
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(50),
+                                gradient: LinearGradient(
+                                    begin: Alignment.topRight,
+                                    end: Alignment.bottomLeft,
+                                    colors: [Colors.purple, Colors.orange])),
+                            width: 70,
+                            height: 70,
+                            child: Padding(
+                              padding: const EdgeInsets.all(4.0),
+                              child: CircleAvatar(
+                                backgroundImage: NetworkImage("https://picsum.photos/100/104"),
+                                backgroundColor: Colors.grey,
+                              ),
+                            ),
+                          ),
+                          Text('User', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+                        ],
+                      ),
+                      Column(
+                        children: <Widget>[
+                          Container(
+                            margin: EdgeInsets.all(5),
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(50),
+                                gradient: LinearGradient(
+                                    begin: Alignment.topRight,
+                                    end: Alignment.bottomLeft,
+                                    colors: [Colors.purple, Colors.orange])),
+                            width: 70,
+                            height: 70,
+                            child: Padding(
+                              padding: const EdgeInsets.all(4.0),
+                              child: CircleAvatar(
+                                backgroundImage: NetworkImage("https://picsum.photos/100/105"),
+                                backgroundColor: Colors.grey,
+                              ),
+                            ),
+                          ),
+                          Text('User', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+                        ],
+                      ),
+                      Column(
+                        children: <Widget>[
+                          Container(
+                            margin: EdgeInsets.all(5),
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(50),
+                                gradient: LinearGradient(
+                                    begin: Alignment.topRight,
+                                    end: Alignment.bottomLeft,
+                                    colors: [Colors.purple, Colors.orange])),
+                            width: 70,
+                            height: 70,
+                            child: Padding(
+                              padding: const EdgeInsets.all(4.0),
+                              child: CircleAvatar(
+                                backgroundImage: NetworkImage("https://picsum.photos/100/106"),
+                                backgroundColor: Colors.grey,
+                              ),
+                            ),
+                          ),
+                          Text('User', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+                        ],
+                      ),
+                      Column(
+                        children: <Widget>[
+                          Container(
+                            margin: EdgeInsets.all(5),
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(50),
+                                gradient: LinearGradient(
+                                    begin: Alignment.topRight,
+                                    end: Alignment.bottomLeft,
+                                    colors: [Colors.purple, Colors.orange])),
+                            width: 70,
+                            height: 70,
+                            child: Padding(
+                              padding: const EdgeInsets.all(4.0),
+                              child: CircleAvatar(
+                                backgroundImage: NetworkImage("https://picsum.photos/100/107"),
+                                backgroundColor: Colors.grey,
+                              ),
+                            ),
+                          ),
+                          Text('User', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+                        ],
+                      ),
+                      Column(
+                        children: <Widget>[
+                          Container(
+                            margin: EdgeInsets.all(5),
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(50),
+                                gradient: LinearGradient(
+                                    begin: Alignment.topRight,
+                                    end: Alignment.bottomLeft,
+                                    colors: [Colors.purple, Colors.orange])),
+                            width: 70,
+                            height: 70,
+                            child: Padding(
+                              padding: const EdgeInsets.all(4.0),
+                              child: CircleAvatar(
+                                backgroundImage: NetworkImage("https://picsum.photos/100/108"),
+                                backgroundColor: Colors.grey,
+                              ),
+                            ),
+                          ),
+                          Text('User', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+                        ],
+                      ),
+                      Column(
+                        children: <Widget>[
+                          Container(
+                            margin: EdgeInsets.all(5),
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(50),
+                                gradient: LinearGradient(
+                                    begin: Alignment.topRight,
+                                    end: Alignment.bottomLeft,
+                                    colors: [Colors.purple, Colors.orange])),
+                            width: 70,
+                            height: 70,
+                            child: Padding(
+                              padding: const EdgeInsets.all(4.0),
+                              child: CircleAvatar(
+                                backgroundImage: NetworkImage("https://picsum.photos/100/109"),
+                                backgroundColor: Colors.grey,
+                              ),
+                            ),
+                          ),
+                          Text('User', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+                        ],
+                      ),
+                      Column(
+                        children: <Widget>[
+                          Container(
+                            margin: EdgeInsets.all(5),
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(50),
+                                gradient: LinearGradient(
+                                    begin: Alignment.topRight,
+                                    end: Alignment.bottomLeft,
+                                    colors: [Colors.purple, Colors.orange])),
+                            width: 70,
+                            height: 70,
+                            child: Padding(
+                              padding: const EdgeInsets.all(4.0),
+                              child: CircleAvatar(
+                                backgroundImage: NetworkImage("https://picsum.photos/100/110"),
+                                backgroundColor: Colors.grey,
+                              ),
+                            ),
+                          ),
+                          Text('User', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+                        ],
                       ),
                     ],
                   ),
                 ),
-                Card(
-                  elevation: 0,
-                  child: Column(
-                    children: <Widget>[
-                      Row(
+                Divider(),
+                // ################################################# container
+                // ################################################# container
+                // ################################################# container
+                // ################################################# container
+                // ################################################# container
+                // ################################################# container
+                Column(
+                  mainAxisSize: MainAxisSize.max,
+                  children: <Widget>[
+                    Card(
+                      elevation: 0,
+                      child: Column(
                         children: <Widget>[
-                          CircleAvatar(
-                            backgroundImage: NetworkImage("https://picsum.photos/100/121"),
+                          Row(
+                            children: <Widget>[
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: CircleAvatar(
+                                  backgroundImage: NetworkImage("https://picsum.photos/100/120"),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text("Username",
+                                    style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black)),
+                              ),
+                              Spacer(),
+                              IconButton(icon: Icon(Icons.more_horiz), onPressed: null)
+                            ],
                           ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text("Username", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black)),
+                          InkWell(
+                            onTap: () => print("clicked image"),
+                            child: Container(
+                              margin: EdgeInsets.all(10),
+                              width: 350,
+                              height: 370,
+                              decoration: BoxDecoration(
+                                  color: Colors.grey,
+                                  borderRadius: BorderRadius.circular(8),
+                                  image: DecorationImage(
+                                      image: NetworkImage("http://www.someletras.com.br/portfolio/cap.png"),
+                                      fit: BoxFit.cover)),
+                            ),
                           ),
-                          Spacer(),
-                          IconButton(icon: Icon(Icons.more_horiz), onPressed: null)
+                          Row(
+                            children: <Widget>[
+                              IconButton(
+                                  icon: Icon(
+                                    Icons.favorite_border,
+                                    size: 30,
+                                    color: Colors.grey[700],
+                                  ),
+                                  onPressed: null),
+                              IconButton(
+                                  icon: Icon(
+                                    Icons.panorama_fish_eye,
+                                    size: 30,
+                                    color: Colors.grey[700],
+                                  ),
+                                  onPressed: null),
+                              IconButton(
+                                  icon: ImageIcon(
+                                    AssetImage("assets/images/paper_plane.png"),
+                                    size: 25,
+                                    color: Colors.grey[900],
+                                  ),
+                                  onPressed: null),
+                              Spacer(),
+                              IconButton(
+                                  icon: Icon(Icons.bookmark_border, size: 30, color: Colors.grey[900]),
+                                  onPressed: null),
+                            ],
+                          ),
+                          ListTile(
+                            title: Text('2.445 likes', style: TextStyle(fontWeight: FontWeight.bold)),
+                            subtitle: Row(
+                              children: <Widget>[
+                                Text('Username ', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black)),
+                                Text('Hi!!!'),
+                                Text(
+                                  ' #hashtag',
+                                  style: TextStyle(color: Colors.blue),
+                                )
+                              ],
+                            ),
+                          ),
                         ],
                       ),
-                      Container(
-                        margin: EdgeInsets.all(10),
-                        width: 400,
-                        height: 300,
-                        decoration: BoxDecoration(
-                            color: Colors.red,
-                            borderRadius: BorderRadius.circular(8),
-                            image: DecorationImage(
-                                image: NetworkImage("https://picsum.photos/400/402"), fit: BoxFit.cover)),
-                      ),
-                      Row(
+                    ),
+                    Card(
+                      elevation: 0,
+                      child: Column(
                         children: <Widget>[
-                          IconButton(
-                              icon: Icon(
-                                Icons.favorite_border,
-                                size: 30,
-                                color: Colors.grey[700],
+                          Row(
+                            children: <Widget>[
+                              CircleAvatar(
+                                backgroundImage: NetworkImage("https://picsum.photos/100/121"),
                               ),
-                              onPressed: null),
-                          IconButton(
-                              icon: Icon(
-                                Icons.panorama_fish_eye,
-                                size: 30,
-                                color: Colors.grey[700],
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text("Username",
+                                    style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black)),
                               ),
-                              onPressed: null),
-                          IconButton(
-                              icon: ImageIcon(
-                                AssetImage("assets/images/paper_plane.png"),
-                                size: 25,
-                                color: Colors.grey[900],
-                              ),
-                              onPressed: null),
-                          Spacer(),
-                          IconButton(
-                              icon: Icon(Icons.bookmark_border, size: 30, color: Colors.grey[900]), onPressed: null),
+                              Spacer(),
+                              IconButton(icon: Icon(Icons.more_horiz), onPressed: null)
+                            ],
+                          ),
+                          Container(
+                            margin: EdgeInsets.all(10),
+                            width: 400,
+                            height: 300,
+                            decoration: BoxDecoration(
+                                color: Colors.transparent,
+                                borderRadius: BorderRadius.circular(8),
+                                image: DecorationImage(
+                                    image: NetworkImage("https://picsum.photos/400/402"), fit: BoxFit.cover)),
+                          ),
+                          Row(
+                            children: <Widget>[
+                              IconButton(
+                                  icon: Icon(
+                                    Icons.favorite_border,
+                                    size: 30,
+                                    color: Colors.grey[700],
+                                  ),
+                                  onPressed: null),
+                              IconButton(
+                                  icon: Icon(
+                                    Icons.panorama_fish_eye,
+                                    size: 30,
+                                    color: Colors.grey[700],
+                                  ),
+                                  onPressed: null),
+                              IconButton(
+                                  icon: ImageIcon(
+                                    AssetImage("assets/images/paper_plane.png"),
+                                    size: 25,
+                                    color: Colors.grey[900],
+                                  ),
+                                  onPressed: null),
+                              Spacer(),
+                              IconButton(
+                                  icon: Icon(Icons.bookmark_border, size: 30, color: Colors.grey[900]),
+                                  onPressed: null),
+                            ],
+                          ),
+                          ListTile(
+                            title: Text('2.445 likes', style: TextStyle(fontWeight: FontWeight.bold)),
+                            subtitle: Row(
+                              children: <Widget>[
+                                Text('Username ', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black)),
+                                Text('Hi!!!'),
+                                Text(
+                                  ' #hashtag',
+                                  style: TextStyle(color: Colors.blue),
+                                )
+                              ],
+                            ),
+                          ),
                         ],
                       ),
-                      ListTile(
-                        title: Text('2.445 likes', style: TextStyle(fontWeight: FontWeight.bold)),
-                        subtitle: Row(
-                          children: <Widget>[
-                            Text('Username ', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black)),
-                            Text('Hi!!!'),
-                            Text(
-                              ' #hashtag',
-                              style: TextStyle(color: Colors.blue),
-                            )
-                          ],
-                        ),
+                    ),
+                    Card(
+                      elevation: 0,
+                      child: Column(
+                        children: <Widget>[
+                          Row(
+                            children: <Widget>[
+                              CircleAvatar(
+                                backgroundImage: NetworkImage("https://picsum.photos/100/122"),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text("Username",
+                                    style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black)),
+                              ),
+                              Spacer(),
+                              IconButton(icon: Icon(Icons.more_horiz), onPressed: null)
+                            ],
+                          ),
+                          Container(
+                            margin: EdgeInsets.all(10),
+                            width: 400,
+                            height: 300,
+                            decoration: BoxDecoration(
+                                color: Colors.transparent,
+                                borderRadius: BorderRadius.circular(8),
+                                image: DecorationImage(
+                                    image: NetworkImage("https://picsum.photos/400/401"), fit: BoxFit.cover)),
+                          ),
+                          Row(
+                            children: <Widget>[
+                              IconButton(
+                                  icon: Icon(
+                                    Icons.favorite_border,
+                                    size: 30,
+                                    color: Colors.grey[700],
+                                  ),
+                                  onPressed: null),
+                              IconButton(
+                                  icon: Icon(
+                                    Icons.panorama_fish_eye,
+                                    size: 30,
+                                    color: Colors.grey[700],
+                                  ),
+                                  onPressed: null),
+                              IconButton(
+                                  icon: ImageIcon(
+                                    AssetImage("assets/images/paper_plane.png"),
+                                    size: 25,
+                                    color: Colors.grey[900],
+                                  ),
+                                  onPressed: null),
+                              Spacer(),
+                              IconButton(
+                                  icon: Icon(Icons.bookmark_border, size: 30, color: Colors.grey[900]),
+                                  onPressed: null),
+                            ],
+                          ),
+                          ListTile(
+                            title: Text('2.445 likes', style: TextStyle(fontWeight: FontWeight.bold)),
+                            subtitle: Row(
+                              children: <Widget>[
+                                Text('Username ', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black)),
+                                Text('Hi!!!'),
+                                Text(
+                                  ' #hashtag',
+                                  style: TextStyle(color: Colors.blue),
+                                )
+                              ],
+                            ),
+                          ),
+                        ],
                       ),
-                    ],
-                  ),
+                    ),
+                    Card(
+                      elevation: 0,
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: <Widget>[
+                          Row(
+                            children: <Widget>[
+                              CircleAvatar(
+                                backgroundImage: NetworkImage("https://picsum.photos/100/124"),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text("Username",
+                                    style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black)),
+                              ),
+                              Spacer(),
+                              IconButton(icon: Icon(Icons.more_horiz), onPressed: null)
+                            ],
+                          ),
+                          Container(
+                            margin: EdgeInsets.all(10),
+                            width: 400,
+                            height: 300,
+                            decoration: BoxDecoration(
+                                color: Colors.transparent,
+                                borderRadius: BorderRadius.circular(8),
+                                image: DecorationImage(
+                                    image: NetworkImage("https://picsum.photos/400/421"), fit: BoxFit.cover)),
+                          ),
+                          Row(
+                            children: <Widget>[
+                              IconButton(
+                                  icon: Icon(
+                                    Icons.favorite_border,
+                                    size: 30,
+                                    color: Colors.grey[700],
+                                  ),
+                                  onPressed: null),
+                              IconButton(
+                                  icon: Icon(
+                                    Icons.panorama_fish_eye,
+                                    size: 30,
+                                    color: Colors.grey[700],
+                                  ),
+                                  onPressed: null),
+                              IconButton(
+                                  icon: ImageIcon(
+                                    AssetImage("assets/images/paper_plane.png"),
+                                    size: 25,
+                                    color: Colors.grey[900],
+                                  ),
+                                  onPressed: null),
+                              Spacer(),
+                              IconButton(
+                                  icon: Icon(Icons.bookmark_border, size: 30, color: Colors.grey[900]),
+                                  onPressed: null),
+                            ],
+                          ),
+                          ListTile(
+                            title: Text('2.445 likes', style: TextStyle(fontWeight: FontWeight.bold)),
+                            subtitle: Row(
+                              children: <Widget>[
+                                Text('Username ', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black)),
+                                Text('Hi!!!'),
+                                Text(
+                                  ' #hashtag',
+                                  style: TextStyle(color: Colors.blue),
+                                )
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
-                Card(
-                  elevation: 0,
-                  child: Column(
-                    children: <Widget>[
-                      Row(
-                        children: <Widget>[
-                          CircleAvatar(
-                            backgroundImage: NetworkImage("https://picsum.photos/100/122"),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text("Username", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black)),
-                          ),
-                          Spacer(),
-                          IconButton(icon: Icon(Icons.more_horiz), onPressed: null)
-                        ],
-                      ),
-                      Container(
-                        margin: EdgeInsets.all(10),
-                        width: 400,
-                        height: 300,
-                        decoration: BoxDecoration(
-                            color: Colors.red,
-                            borderRadius: BorderRadius.circular(8),
-                            image: DecorationImage(
-                                image: NetworkImage("https://picsum.photos/400/401"), fit: BoxFit.cover)),
-                      ),
-                      Row(
-                        children: <Widget>[
-                          IconButton(
-                              icon: Icon(
-                                Icons.favorite_border,
-                                size: 30,
-                                color: Colors.grey[700],
-                              ),
-                              onPressed: null),
-                          IconButton(
-                              icon: Icon(
-                                Icons.panorama_fish_eye,
-                                size: 30,
-                                color: Colors.grey[700],
-                              ),
-                              onPressed: null),
-                          IconButton(
-                              icon: ImageIcon(
-                                AssetImage("assets/images/paper_plane.png"),
-                                size: 25,
-                                color: Colors.grey[900],
-                              ),
-                              onPressed: null),
-                          Spacer(),
-                          IconButton(
-                              icon: Icon(Icons.bookmark_border, size: 30, color: Colors.grey[900]), onPressed: null),
-                        ],
-                      ),
-                      ListTile(
-                        title: Text('2.445 likes', style: TextStyle(fontWeight: FontWeight.bold)),
-                        subtitle: Row(
-                          children: <Widget>[
-                            Text('Username ', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black)),
-                            Text('Hi!!!'),
-                            Text(
-                              ' #hashtag',
-                              style: TextStyle(color: Colors.blue),
-                            )
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Card(
-                  elevation: 0,
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: <Widget>[
-                      Row(
-                        children: <Widget>[
-                          CircleAvatar(
-                            backgroundImage: NetworkImage("https://picsum.photos/100/124"),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text("Username", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black)),
-                          ),
-                          Spacer(),
-                          IconButton(icon: Icon(Icons.more_horiz), onPressed: null)
-                        ],
-                      ),
-                      Container(
-                        margin: EdgeInsets.all(10),
-                        width: 400,
-                        height: 300,
-                        decoration: BoxDecoration(
-                            color: Colors.red,
-                            borderRadius: BorderRadius.circular(8),
-                            image: DecorationImage(
-                                image: NetworkImage("https://picsum.photos/400/421"), fit: BoxFit.cover)),
-                      ),
-                      Row(
-                        children: <Widget>[
-                          IconButton(
-                              icon: Icon(
-                                Icons.favorite_border,
-                                size: 30,
-                                color: Colors.grey[700],
-                              ),
-                              onPressed: null),
-                          IconButton(
-                              icon: Icon(
-                                Icons.panorama_fish_eye,
-                                size: 30,
-                                color: Colors.grey[700],
-                              ),
-                              onPressed: null),
-                          IconButton(
-                              icon: ImageIcon(
-                                AssetImage("assets/images/paper_plane.png"),
-                                size: 25,
-                                color: Colors.grey[900],
-                              ),
-                              onPressed: null),
-                          Spacer(),
-                          IconButton(
-                              icon: Icon(Icons.bookmark_border, size: 30, color: Colors.grey[900]), onPressed: null),
-                        ],
-                      ),
-                      ListTile(
-                        title: Text('2.445 likes', style: TextStyle(fontWeight: FontWeight.bold)),
-                        subtitle: Row(
-                          children: <Widget>[
-                            Text('Username ', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black)),
-                            Text('Hi!!!'),
-                            Text(
-                              ' #hashtag',
-                              style: TextStyle(color: Colors.blue),
-                            )
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
+              ]),
+            ]),
           ),
-        ]),
+        ],
       ),
     );
   }
