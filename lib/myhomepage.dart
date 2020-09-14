@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'widgets/UserStoryCircleAvatar.dart';
+
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
@@ -27,7 +29,8 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: true,
+      resizeToAvoidBottomPadding: false,
+      resizeToAvoidBottomInset: false,
       bottomNavigationBar: BottomNavigationBar(
         iconSize: 35,
         type: BottomNavigationBarType.fixed,
@@ -75,9 +78,12 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               onPressed: null),
         ],
-        title: Text(
-          "Instagram",
-          style: TextStyle(color: Colors.black, fontFamily: 'Billabong', fontSize: 40, fontWeight: FontWeight.w500),
+        title: Center(
+          child: Text(
+            "Instagram",
+            textAlign: TextAlign.center,
+            style: TextStyle(color: Colors.black, fontFamily: 'Billabong', fontSize: 40, fontWeight: FontWeight.w500),
+          ),
         ),
       ),
       body: SingleChildScrollView(
@@ -105,29 +111,7 @@ class _MyHomePageState extends State<MyHomePage> {
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: <Widget>[
-                Column(
-                  children: <Widget>[
-                    Container(
-                      margin: EdgeInsets.all(5),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(50),
-                      ),
-                      width: 70,
-                      height: 70,
-                      child: Padding(
-                        padding: const EdgeInsets.all(4.0),
-                        child: CircleAvatar(
-                          backgroundImage: NetworkImage("https://picsum.photos/100/100"),
-                          backgroundColor: Colors.grey,
-                        ),
-                      ),
-                    ),
-                    Text(
-                      'Your Story',
-                      style: TextStyle(color: Colors.grey),
-                    ),
-                  ],
-                ),
+                UserStoryCircleAvatar(),
                 Column(
                   children: <Widget>[
                     Container(
@@ -148,7 +132,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                       ),
                     ),
-                    Text('User'),
+                    Text('User', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
                   ],
                 ),
                 Column(
@@ -171,7 +155,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                       ),
                     ),
-                    Text('User'),
+                    Text('User', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
                   ],
                 ),
                 Column(
@@ -194,7 +178,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                       ),
                     ),
-                    Text('User'),
+                    Text('User', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
                   ],
                 ),
                 Column(
@@ -217,7 +201,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                       ),
                     ),
-                    Text('User'),
+                    Text('User', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
                   ],
                 ),
                 Column(
@@ -240,7 +224,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                       ),
                     ),
-                    Text('User'),
+                    Text('User', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
                   ],
                 ),
                 Column(
@@ -263,7 +247,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                       ),
                     ),
-                    Text('User'),
+                    Text('User', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
                   ],
                 ),
                 Column(
@@ -286,7 +270,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                       ),
                     ),
-                    Text('User'),
+                    Text('User', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
                   ],
                 ),
                 Column(
@@ -309,7 +293,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                       ),
                     ),
-                    Text('User'),
+                    Text('User', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
                   ],
                 ),
                 Column(
@@ -332,7 +316,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                       ),
                     ),
-                    Text('User'),
+                    Text('User', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
                   ],
                 ),
                 Column(
@@ -355,15 +339,16 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                       ),
                     ),
-                    Text('User'),
+                    Text('User', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
                   ],
                 ),
               ],
             ),
           ),
           Divider(),
+          // ################################################# container
           Container(
-            height: MediaQuery.of(context).size.height - 350,
+            height: MediaQuery.of(context).size.height - kBottomNavigationBarHeight - 250,
             //color: Colors.amber,
             child: ListView(
               children: <Widget>[
@@ -378,34 +363,65 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Text("Username"),
+                            child: Text("Username", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black)),
                           ),
                           Spacer(),
                           IconButton(icon: Icon(Icons.more_horiz), onPressed: null)
                         ],
                       ),
-                      Container(
-                        margin: EdgeInsets.all(10),
-                        width: 400,
-                        height: 300,
-                        decoration: BoxDecoration(
-                            color: Colors.red,
-                            borderRadius: BorderRadius.circular(8),
-                            image: DecorationImage(
-                                image: NetworkImage("https://picsum.photos/400/400"), fit: BoxFit.cover)),
+                      InkWell(
+                        onTap: () => print("clicked image"),
+                        child: Container(
+                          margin: EdgeInsets.all(10),
+                          width: 400,
+                          height: 300,
+                          decoration: BoxDecoration(
+                              color: Colors.red,
+                              borderRadius: BorderRadius.circular(8),
+                              image: DecorationImage(
+                                  image: NetworkImage("https://picsum.photos/400/400"), fit: BoxFit.cover)),
+                        ),
                       ),
                       Row(
                         children: <Widget>[
-                          IconButton(icon: Icon(Icons.favorite_border), onPressed: null),
-                          IconButton(icon: Icon(Icons.panorama_fish_eye), onPressed: null),
-                          IconButton(icon: Icon(Icons.airplanemode_active), onPressed: null),
+                          IconButton(
+                              icon: Icon(
+                                Icons.favorite_border,
+                                size: 30,
+                                color: Colors.grey[700],
+                              ),
+                              onPressed: null),
+                          IconButton(
+                              icon: Icon(
+                                Icons.panorama_fish_eye,
+                                size: 30,
+                                color: Colors.grey[700],
+                              ),
+                              onPressed: null),
+                          IconButton(
+                              icon: ImageIcon(
+                                AssetImage("assets/images/paper_plane.png"),
+                                size: 25,
+                                color: Colors.grey[900],
+                              ),
+                              onPressed: null),
                           Spacer(),
-                          IconButton(icon: Icon(Icons.bookmark_border), onPressed: null),
+                          IconButton(
+                              icon: Icon(Icons.bookmark_border, size: 30, color: Colors.grey[900]), onPressed: null),
                         ],
                       ),
                       ListTile(
-                        title: Text('2.445 likes'),
-                        subtitle: Text('User friend HI!!! #hashtag'),
+                        title: Text('2.445 likes', style: TextStyle(fontWeight: FontWeight.bold)),
+                        subtitle: Row(
+                          children: <Widget>[
+                            Text('Username ', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black)),
+                            Text('Hi!!!'),
+                            Text(
+                              ' #hashtag',
+                              style: TextStyle(color: Colors.blue),
+                            )
+                          ],
+                        ),
                       ),
                     ],
                   ),
@@ -421,7 +437,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Text("Username"),
+                            child: Text("Username", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black)),
                           ),
                           Spacer(),
                           IconButton(icon: Icon(Icons.more_horiz), onPressed: null)
@@ -439,16 +455,44 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                       Row(
                         children: <Widget>[
-                          IconButton(icon: Icon(Icons.favorite_border), onPressed: null),
-                          IconButton(icon: Icon(Icons.panorama_fish_eye), onPressed: null),
-                          IconButton(icon: Icon(Icons.airplanemode_active), onPressed: null),
+                          IconButton(
+                              icon: Icon(
+                                Icons.favorite_border,
+                                size: 30,
+                                color: Colors.grey[700],
+                              ),
+                              onPressed: null),
+                          IconButton(
+                              icon: Icon(
+                                Icons.panorama_fish_eye,
+                                size: 30,
+                                color: Colors.grey[700],
+                              ),
+                              onPressed: null),
+                          IconButton(
+                              icon: ImageIcon(
+                                AssetImage("assets/images/paper_plane.png"),
+                                size: 25,
+                                color: Colors.grey[900],
+                              ),
+                              onPressed: null),
                           Spacer(),
-                          IconButton(icon: Icon(Icons.bookmark_border), onPressed: null),
+                          IconButton(
+                              icon: Icon(Icons.bookmark_border, size: 30, color: Colors.grey[900]), onPressed: null),
                         ],
                       ),
                       ListTile(
-                        title: Text('2.445 likes'),
-                        subtitle: Text('User friend HI!!! #hashtag'),
+                        title: Text('2.445 likes', style: TextStyle(fontWeight: FontWeight.bold)),
+                        subtitle: Row(
+                          children: <Widget>[
+                            Text('Username ', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black)),
+                            Text('Hi!!!'),
+                            Text(
+                              ' #hashtag',
+                              style: TextStyle(color: Colors.blue),
+                            )
+                          ],
+                        ),
                       ),
                     ],
                   ),
@@ -464,7 +508,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Text("Username"),
+                            child: Text("Username", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black)),
                           ),
                           Spacer(),
                           IconButton(icon: Icon(Icons.more_horiz), onPressed: null)
@@ -482,16 +526,44 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                       Row(
                         children: <Widget>[
-                          IconButton(icon: Icon(Icons.favorite_border), onPressed: null),
-                          IconButton(icon: Icon(Icons.panorama_fish_eye), onPressed: null),
-                          IconButton(icon: Icon(Icons.airplanemode_active), onPressed: null),
+                          IconButton(
+                              icon: Icon(
+                                Icons.favorite_border,
+                                size: 30,
+                                color: Colors.grey[700],
+                              ),
+                              onPressed: null),
+                          IconButton(
+                              icon: Icon(
+                                Icons.panorama_fish_eye,
+                                size: 30,
+                                color: Colors.grey[700],
+                              ),
+                              onPressed: null),
+                          IconButton(
+                              icon: ImageIcon(
+                                AssetImage("assets/images/paper_plane.png"),
+                                size: 25,
+                                color: Colors.grey[900],
+                              ),
+                              onPressed: null),
                           Spacer(),
-                          IconButton(icon: Icon(Icons.bookmark_border), onPressed: null),
+                          IconButton(
+                              icon: Icon(Icons.bookmark_border, size: 30, color: Colors.grey[900]), onPressed: null),
                         ],
                       ),
                       ListTile(
-                        title: Text('2.445 likes'),
-                        subtitle: Text('User friend HI!!! #hashtag'),
+                        title: Text('2.445 likes', style: TextStyle(fontWeight: FontWeight.bold)),
+                        subtitle: Row(
+                          children: <Widget>[
+                            Text('Username ', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black)),
+                            Text('Hi!!!'),
+                            Text(
+                              ' #hashtag',
+                              style: TextStyle(color: Colors.blue),
+                            )
+                          ],
+                        ),
                       ),
                     ],
                   ),
@@ -508,7 +580,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Text("Username"),
+                            child: Text("Username", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black)),
                           ),
                           Spacer(),
                           IconButton(icon: Icon(Icons.more_horiz), onPressed: null)
@@ -526,16 +598,44 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                       Row(
                         children: <Widget>[
-                          IconButton(icon: Icon(Icons.favorite_border), onPressed: null),
-                          IconButton(icon: Icon(Icons.panorama_fish_eye), onPressed: null),
-                          IconButton(icon: Icon(Icons.airplanemode_active), onPressed: null),
+                          IconButton(
+                              icon: Icon(
+                                Icons.favorite_border,
+                                size: 30,
+                                color: Colors.grey[700],
+                              ),
+                              onPressed: null),
+                          IconButton(
+                              icon: Icon(
+                                Icons.panorama_fish_eye,
+                                size: 30,
+                                color: Colors.grey[700],
+                              ),
+                              onPressed: null),
+                          IconButton(
+                              icon: ImageIcon(
+                                AssetImage("assets/images/paper_plane.png"),
+                                size: 25,
+                                color: Colors.grey[900],
+                              ),
+                              onPressed: null),
                           Spacer(),
-                          IconButton(icon: Icon(Icons.bookmark_border), onPressed: null),
+                          IconButton(
+                              icon: Icon(Icons.bookmark_border, size: 30, color: Colors.grey[900]), onPressed: null),
                         ],
                       ),
                       ListTile(
-                        title: Text('2.445 likes'),
-                        subtitle: Text('User friend HI!!! #hashtag'),
+                        title: Text('2.445 likes', style: TextStyle(fontWeight: FontWeight.bold)),
+                        subtitle: Row(
+                          children: <Widget>[
+                            Text('Username ', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black)),
+                            Text('Hi!!!'),
+                            Text(
+                              ' #hashtag',
+                              style: TextStyle(color: Colors.blue),
+                            )
+                          ],
+                        ),
                       ),
                     ],
                   ),
