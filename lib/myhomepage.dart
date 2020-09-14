@@ -27,7 +27,9 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: true,
       bottomNavigationBar: BottomNavigationBar(
+        iconSize: 35,
         type: BottomNavigationBarType.fixed,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
@@ -57,9 +59,21 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        leading: IconButton(icon: Icon(Icons.camera_alt), onPressed: null),
+        leading: IconButton(
+            icon: ImageIcon(
+              AssetImage("assets/images/instagram_camera_icon.png"),
+              size: 25,
+              color: Colors.grey[700],
+            ),
+            onPressed: () => print("clicked")),
         actions: <Widget>[
-          IconButton(icon: Icon(Icons.airplanemode_active), onPressed: null),
+          IconButton(
+              icon: ImageIcon(
+                AssetImage("assets/images/paper_plane.png"),
+                size: 25,
+                color: Colors.grey[700],
+              ),
+              onPressed: null),
         ],
         title: Text(
           "Instagram",
@@ -67,7 +81,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       body: SingleChildScrollView(
-        child: Column(mainAxisSize: MainAxisSize.max, children: <Widget>[
+        child: Column(children: <Widget>[
           Row(
             children: <Widget>[
               Padding(
@@ -96,11 +110,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     Container(
                       margin: EdgeInsets.all(5),
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50),
-                          gradient: LinearGradient(
-                              begin: Alignment.topRight,
-                              end: Alignment.bottomLeft,
-                              colors: [Colors.purple, Colors.orange])),
+                        borderRadius: BorderRadius.circular(50),
+                      ),
                       width: 70,
                       height: 70,
                       child: Padding(
@@ -111,7 +122,10 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                       ),
                     ),
-                    Text('User'),
+                    Text(
+                      'Your Story',
+                      style: TextStyle(color: Colors.grey),
+                    ),
                   ],
                 ),
                 Column(
@@ -349,7 +363,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           Divider(),
           Container(
-            height: MediaQuery.of(context).size.height,
+            height: MediaQuery.of(context).size.height - 350,
             //color: Colors.amber,
             child: ListView(
               children: <Widget>[
@@ -360,7 +374,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       Row(
                         children: <Widget>[
                           CircleAvatar(
-                            backgroundImage: NetworkImage("https://picsum.photos/100/109"),
+                            backgroundImage: NetworkImage("https://picsum.photos/100/120"),
                           ),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
@@ -371,7 +385,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         ],
                       ),
                       Container(
-                        margin: EdgeInsets.all(20),
+                        margin: EdgeInsets.all(10),
                         width: 400,
                         height: 300,
                         decoration: BoxDecoration(
@@ -403,7 +417,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       Row(
                         children: <Widget>[
                           CircleAvatar(
-                            backgroundImage: NetworkImage("https://picsum.photos/100/109"),
+                            backgroundImage: NetworkImage("https://picsum.photos/100/121"),
                           ),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
@@ -414,7 +428,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         ],
                       ),
                       Container(
-                        margin: EdgeInsets.all(20),
+                        margin: EdgeInsets.all(10),
                         width: 400,
                         height: 300,
                         decoration: BoxDecoration(
@@ -446,7 +460,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       Row(
                         children: <Widget>[
                           CircleAvatar(
-                            backgroundImage: NetworkImage("https://picsum.photos/100/109"),
+                            backgroundImage: NetworkImage("https://picsum.photos/100/122"),
                           ),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
@@ -457,7 +471,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         ],
                       ),
                       Container(
-                        margin: EdgeInsets.all(20),
+                        margin: EdgeInsets.all(10),
                         width: 400,
                         height: 300,
                         decoration: BoxDecoration(
@@ -465,6 +479,50 @@ class _MyHomePageState extends State<MyHomePage> {
                             borderRadius: BorderRadius.circular(8),
                             image: DecorationImage(
                                 image: NetworkImage("https://picsum.photos/400/401"), fit: BoxFit.cover)),
+                      ),
+                      Row(
+                        children: <Widget>[
+                          IconButton(icon: Icon(Icons.favorite_border), onPressed: null),
+                          IconButton(icon: Icon(Icons.panorama_fish_eye), onPressed: null),
+                          IconButton(icon: Icon(Icons.airplanemode_active), onPressed: null),
+                          Spacer(),
+                          IconButton(icon: Icon(Icons.bookmark_border), onPressed: null),
+                        ],
+                      ),
+                      ListTile(
+                        title: Text('2.445 likes'),
+                        subtitle: Text('User friend HI!!! #hashtag'),
+                      ),
+                    ],
+                  ),
+                ),
+                Card(
+                  elevation: 0,
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      Row(
+                        children: <Widget>[
+                          CircleAvatar(
+                            backgroundImage: NetworkImage("https://picsum.photos/100/124"),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text("Username"),
+                          ),
+                          Spacer(),
+                          IconButton(icon: Icon(Icons.more_horiz), onPressed: null)
+                        ],
+                      ),
+                      Container(
+                        margin: EdgeInsets.all(10),
+                        width: 400,
+                        height: 300,
+                        decoration: BoxDecoration(
+                            color: Colors.red,
+                            borderRadius: BorderRadius.circular(8),
+                            image: DecorationImage(
+                                image: NetworkImage("https://picsum.photos/400/421"), fit: BoxFit.cover)),
                       ),
                       Row(
                         children: <Widget>[
