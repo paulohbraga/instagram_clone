@@ -1,6 +1,6 @@
 # instagram_home
 
-A new Flutter project.
+A Flutter clone of Instagram home.
 
 ## Getting Started
 
