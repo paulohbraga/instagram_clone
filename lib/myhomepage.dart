@@ -29,7 +29,6 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomPadding: false,
       resizeToAvoidBottomInset: false,
       bottomNavigationBar: BottomNavigationBar(
         iconSize: 35,
@@ -37,23 +36,23 @@ class _MyHomePageState extends State<MyHomePage> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            title: Text(''),
+            label: "teste",
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.search),
-            title: Text(''),
+            label: "teste",
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.camera_alt),
-            title: Text(''),
+            label: "teste",
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.favorite_border),
-            title: Text(''),
+            label: "teste",
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person_outline),
-            title: Text(''),
+            label: "teste",
           ),
         ],
         currentIndex: 0,
@@ -87,8 +86,11 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Text(
                 "Instagram",
                 textAlign: TextAlign.center,
-                style:
-                    TextStyle(color: Colors.black, fontFamily: 'Billabong', fontSize: 40, fontWeight: FontWeight.w500),
+                style: TextStyle(
+                    color: Colors.black,
+                    fontFamily: 'Billabong',
+                    fontSize: 40,
+                    fontWeight: FontWeight.w500),
               ),
             ),
           ),
@@ -109,7 +111,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     IconButton(icon: Icon(Icons.arrow_right), onPressed: null),
                     Padding(
                       padding: const EdgeInsets.only(right: 15),
-                      child: Text('Watch all', style: TextStyle(fontWeight: FontWeight.bold)),
+                      child: Text('Watch all',
+                          style: TextStyle(fontWeight: FontWeight.bold)),
                     ),
                   ],
                 ),
@@ -134,12 +137,15 @@ class _MyHomePageState extends State<MyHomePage> {
                             child: Padding(
                               padding: const EdgeInsets.all(4.0),
                               child: CircleAvatar(
-                                backgroundImage: NetworkImage("https://picsum.photos/100/101"),
+                                backgroundImage: NetworkImage(
+                                    "https://picsum.photos/100/101"),
                                 backgroundColor: Colors.grey,
                               ),
                             ),
                           ),
-                          Text('User', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+                          Text('User',
+                              style: TextStyle(
+                                  fontSize: 12, fontWeight: FontWeight.bold)),
                         ],
                       ),
                       Column(
@@ -157,12 +163,15 @@ class _MyHomePageState extends State<MyHomePage> {
                             child: Padding(
                               padding: const EdgeInsets.all(4.0),
                               child: CircleAvatar(
-                                backgroundImage: NetworkImage("https://picsum.photos/100/102"),
+                                backgroundImage: NetworkImage(
+                                    "https://picsum.photos/100/102"),
                                 backgroundColor: Colors.grey,
                               ),
                             ),
                           ),
-                          Text('User', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+                          Text('User',
+                              style: TextStyle(
+                                  fontSize: 12, fontWeight: FontWeight.bold)),
                         ],
                       ),
                       Column(
@@ -180,12 +189,15 @@ class _MyHomePageState extends State<MyHomePage> {
                             child: Padding(
                               padding: const EdgeInsets.all(4.0),
                               child: CircleAvatar(
-                                backgroundImage: NetworkImage("https://picsum.photos/100/103"),
+                                backgroundImage: NetworkImage(
+                                    "https://picsum.photos/100/103"),
                                 backgroundColor: Colors.grey,
                               ),
                             ),
                           ),
-                          Text('User', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+                          Text('User',
+                              style: TextStyle(
+                                  fontSize: 12, fontWeight: FontWeight.bold)),
                         ],
                       ),
                       Column(
@@ -203,12 +215,15 @@ class _MyHomePageState extends State<MyHomePage> {
                             child: Padding(
                               padding: const EdgeInsets.all(4.0),
                               child: CircleAvatar(
-                                backgroundImage: NetworkImage("https://picsum.photos/100/104"),
+                                backgroundImage: NetworkImage(
+                                    "https://picsum.photos/100/104"),
                                 backgroundColor: Colors.grey,
                               ),
                             ),
                           ),
-                          Text('User', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+                          Text('User',
+                              style: TextStyle(
+                                  fontSize: 12, fontWeight: FontWeight.bold)),
                         ],
                       ),
                       Column(
@@ -226,12 +241,15 @@ class _MyHomePageState extends State<MyHomePage> {
                             child: Padding(
                               padding: const EdgeInsets.all(4.0),
                               child: CircleAvatar(
-                                backgroundImage: NetworkImage("https://picsum.photos/100/105"),
+                                backgroundImage: NetworkImage(
+                                    "https://picsum.photos/100/105"),
                                 backgroundColor: Colors.grey,
                               ),
                             ),
                           ),
-                          Text('User', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+                          Text('User',
+                              style: TextStyle(
+                                  fontSize: 12, fontWeight: FontWeight.bold)),
                         ],
                       ),
                       Column(
@@ -249,12 +267,15 @@ class _MyHomePageState extends State<MyHomePage> {
                             child: Padding(
                               padding: const EdgeInsets.all(4.0),
                               child: CircleAvatar(
-                                backgroundImage: NetworkImage("https://picsum.photos/100/106"),
+                                backgroundImage: NetworkImage(
+                                    "https://picsum.photos/100/106"),
                                 backgroundColor: Colors.grey,
                               ),
                             ),
                           ),
-                          Text('User', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+                          Text('User',
+                              style: TextStyle(
+                                  fontSize: 12, fontWeight: FontWeight.bold)),
                         ],
                       ),
                       Column(
@@ -272,12 +293,15 @@ class _MyHomePageState extends State<MyHomePage> {
                             child: Padding(
                               padding: const EdgeInsets.all(4.0),
                               child: CircleAvatar(
-                                backgroundImage: NetworkImage("https://picsum.photos/100/107"),
+                                backgroundImage: NetworkImage(
+                                    "https://picsum.photos/100/107"),
                                 backgroundColor: Colors.grey,
                               ),
                             ),
                           ),
-                          Text('User', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+                          Text('User',
+                              style: TextStyle(
+                                  fontSize: 12, fontWeight: FontWeight.bold)),
                         ],
                       ),
                       Column(
@@ -295,12 +319,15 @@ class _MyHomePageState extends State<MyHomePage> {
                             child: Padding(
                               padding: const EdgeInsets.all(4.0),
                               child: CircleAvatar(
-                                backgroundImage: NetworkImage("https://picsum.photos/100/108"),
+                                backgroundImage: NetworkImage(
+                                    "https://picsum.photos/100/108"),
                                 backgroundColor: Colors.grey,
                               ),
                             ),
                           ),
-                          Text('User', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+                          Text('User',
+                              style: TextStyle(
+                                  fontSize: 12, fontWeight: FontWeight.bold)),
                         ],
                       ),
                       Column(
@@ -318,12 +345,15 @@ class _MyHomePageState extends State<MyHomePage> {
                             child: Padding(
                               padding: const EdgeInsets.all(4.0),
                               child: CircleAvatar(
-                                backgroundImage: NetworkImage("https://picsum.photos/100/109"),
+                                backgroundImage: NetworkImage(
+                                    "https://picsum.photos/100/109"),
                                 backgroundColor: Colors.grey,
                               ),
                             ),
                           ),
-                          Text('User', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+                          Text('User',
+                              style: TextStyle(
+                                  fontSize: 12, fontWeight: FontWeight.bold)),
                         ],
                       ),
                       Column(
@@ -341,12 +371,15 @@ class _MyHomePageState extends State<MyHomePage> {
                             child: Padding(
                               padding: const EdgeInsets.all(4.0),
                               child: CircleAvatar(
-                                backgroundImage: NetworkImage("https://picsum.photos/100/110"),
+                                backgroundImage: NetworkImage(
+                                    "https://picsum.photos/100/110"),
                                 backgroundColor: Colors.grey,
                               ),
                             ),
                           ),
-                          Text('User', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+                          Text('User',
+                              style: TextStyle(
+                                  fontSize: 12, fontWeight: FontWeight.bold)),
                         ],
                       ),
                     ],
@@ -371,16 +404,20 @@ class _MyHomePageState extends State<MyHomePage> {
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: CircleAvatar(
-                                  backgroundImage: NetworkImage("https://picsum.photos/100/120"),
+                                  backgroundImage: NetworkImage(
+                                      "https://picsum.photos/100/120"),
                                 ),
                               ),
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Text("Username",
-                                    style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black)),
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.black)),
                               ),
                               Spacer(),
-                              IconButton(icon: Icon(Icons.more_horiz), onPressed: null)
+                              IconButton(
+                                  icon: Icon(Icons.more_horiz), onPressed: null)
                             ],
                           ),
                           InkWell(
@@ -393,7 +430,8 @@ class _MyHomePageState extends State<MyHomePage> {
                                   color: Colors.grey,
                                   borderRadius: BorderRadius.circular(8),
                                   image: DecorationImage(
-                                      image: NetworkImage("http://www.someletras.com.br/portfolio/cap.png"),
+                                      image: NetworkImage(
+                                          "https://picsum.photos/200/300"),
                                       fit: BoxFit.cover)),
                             ),
                           ),
@@ -422,15 +460,20 @@ class _MyHomePageState extends State<MyHomePage> {
                                   onPressed: null),
                               Spacer(),
                               IconButton(
-                                  icon: Icon(Icons.bookmark_border, size: 30, color: Colors.grey[900]),
+                                  icon: Icon(Icons.bookmark_border,
+                                      size: 30, color: Colors.grey[900]),
                                   onPressed: null),
                             ],
                           ),
                           ListTile(
-                            title: Text('2.445 likes', style: TextStyle(fontWeight: FontWeight.bold)),
+                            title: Text('2.445 likes',
+                                style: TextStyle(fontWeight: FontWeight.bold)),
                             subtitle: Row(
                               children: <Widget>[
-                                Text('Username ', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black)),
+                                Text('Username ',
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.black)),
                                 Text('Hi!!!'),
                                 Text(
                                   ' #hashtag',
@@ -449,15 +492,19 @@ class _MyHomePageState extends State<MyHomePage> {
                           Row(
                             children: <Widget>[
                               CircleAvatar(
-                                backgroundImage: NetworkImage("https://picsum.photos/100/121"),
+                                backgroundImage: NetworkImage(
+                                    "https://picsum.photos/100/121"),
                               ),
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Text("Username",
-                                    style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black)),
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.black)),
                               ),
                               Spacer(),
-                              IconButton(icon: Icon(Icons.more_horiz), onPressed: null)
+                              IconButton(
+                                  icon: Icon(Icons.more_horiz), onPressed: null)
                             ],
                           ),
                           Container(
@@ -468,7 +515,9 @@ class _MyHomePageState extends State<MyHomePage> {
                                 color: Colors.transparent,
                                 borderRadius: BorderRadius.circular(8),
                                 image: DecorationImage(
-                                    image: NetworkImage("https://picsum.photos/400/402"), fit: BoxFit.cover)),
+                                    image: NetworkImage(
+                                        "https://picsum.photos/400/402"),
+                                    fit: BoxFit.cover)),
                           ),
                           Row(
                             children: <Widget>[
@@ -495,15 +544,20 @@ class _MyHomePageState extends State<MyHomePage> {
                                   onPressed: null),
                               Spacer(),
                               IconButton(
-                                  icon: Icon(Icons.bookmark_border, size: 30, color: Colors.grey[900]),
+                                  icon: Icon(Icons.bookmark_border,
+                                      size: 30, color: Colors.grey[900]),
                                   onPressed: null),
                             ],
                           ),
                           ListTile(
-                            title: Text('2.445 likes', style: TextStyle(fontWeight: FontWeight.bold)),
+                            title: Text('2.445 likes',
+                                style: TextStyle(fontWeight: FontWeight.bold)),
                             subtitle: Row(
                               children: <Widget>[
-                                Text('Username ', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black)),
+                                Text('Username ',
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.black)),
                                 Text('Hi!!!'),
                                 Text(
                                   ' #hashtag',
@@ -522,15 +576,19 @@ class _MyHomePageState extends State<MyHomePage> {
                           Row(
                             children: <Widget>[
                               CircleAvatar(
-                                backgroundImage: NetworkImage("https://picsum.photos/100/122"),
+                                backgroundImage: NetworkImage(
+                                    "https://picsum.photos/100/122"),
                               ),
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Text("Username",
-                                    style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black)),
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.black)),
                               ),
                               Spacer(),
-                              IconButton(icon: Icon(Icons.more_horiz), onPressed: null)
+                              IconButton(
+                                  icon: Icon(Icons.more_horiz), onPressed: null)
                             ],
                           ),
                           Container(
@@ -541,7 +599,9 @@ class _MyHomePageState extends State<MyHomePage> {
                                 color: Colors.transparent,
                                 borderRadius: BorderRadius.circular(8),
                                 image: DecorationImage(
-                                    image: NetworkImage("https://picsum.photos/400/401"), fit: BoxFit.cover)),
+                                    image: NetworkImage(
+                                        "https://picsum.photos/400/401"),
+                                    fit: BoxFit.cover)),
                           ),
                           Row(
                             children: <Widget>[
@@ -568,15 +628,20 @@ class _MyHomePageState extends State<MyHomePage> {
                                   onPressed: null),
                               Spacer(),
                               IconButton(
-                                  icon: Icon(Icons.bookmark_border, size: 30, color: Colors.grey[900]),
+                                  icon: Icon(Icons.bookmark_border,
+                                      size: 30, color: Colors.grey[900]),
                                   onPressed: null),
                             ],
                           ),
                           ListTile(
-                            title: Text('2.445 likes', style: TextStyle(fontWeight: FontWeight.bold)),
+                            title: Text('2.445 likes',
+                                style: TextStyle(fontWeight: FontWeight.bold)),
                             subtitle: Row(
                               children: <Widget>[
-                                Text('Username ', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black)),
+                                Text('Username ',
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.black)),
                                 Text('Hi!!!'),
                                 Text(
                                   ' #hashtag',
@@ -596,15 +661,19 @@ class _MyHomePageState extends State<MyHomePage> {
                           Row(
                             children: <Widget>[
                               CircleAvatar(
-                                backgroundImage: NetworkImage("https://picsum.photos/100/124"),
+                                backgroundImage: NetworkImage(
+                                    "https://picsum.photos/100/124"),
                               ),
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Text("Username",
-                                    style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black)),
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.black)),
                               ),
                               Spacer(),
-                              IconButton(icon: Icon(Icons.more_horiz), onPressed: null)
+                              IconButton(
+                                  icon: Icon(Icons.more_horiz), onPressed: null)
                             ],
                           ),
                           Container(
@@ -615,7 +684,9 @@ class _MyHomePageState extends State<MyHomePage> {
                                 color: Colors.transparent,
                                 borderRadius: BorderRadius.circular(8),
                                 image: DecorationImage(
-                                    image: NetworkImage("https://picsum.photos/400/421"), fit: BoxFit.cover)),
+                                    image: NetworkImage(
+                                        "https://picsum.photos/400/421"),
+                                    fit: BoxFit.cover)),
                           ),
                           Row(
                             children: <Widget>[
@@ -642,15 +713,20 @@ class _MyHomePageState extends State<MyHomePage> {
                                   onPressed: null),
                               Spacer(),
                               IconButton(
-                                  icon: Icon(Icons.bookmark_border, size: 30, color: Colors.grey[900]),
+                                  icon: Icon(Icons.bookmark_border,
+                                      size: 30, color: Colors.grey[900]),
                                   onPressed: null),
                             ],
                           ),
                           ListTile(
-                            title: Text('2.445 likes', style: TextStyle(fontWeight: FontWeight.bold)),
+                            title: Text('2.445 likes',
+                                style: TextStyle(fontWeight: FontWeight.bold)),
                             subtitle: Row(
                               children: <Widget>[
-                                Text('Username ', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black)),
+                                Text('Username ',
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.black)),
                                 Text('Hi!!!'),
                                 Text(
                                   ' #hashtag',
